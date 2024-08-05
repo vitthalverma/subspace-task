@@ -22,3 +22,10 @@ This project is a starting point for a Flutter application. The app fetches blog
 
 <img src="screenshots/detail.png" width="300">
 
+### Installation
+
+1. Clone the repository:
+   git clone https://github.com/yourusername/subspace_task.git
+   cd subspace_task
+2. flutter pub get
+3. flutter run  
