@@ -16,8 +16,8 @@ This project is a starting point for a Flutter application. The app fetches blog
 
 #### Home Screen
 
-<img src="screenshots/home_screen.png" width="300">
+<img src="screenshots/home.png" width="300">
 
 #### Blog Details Screen
 
-<img src="screenshots/blog_details_screen.png" width="300">
+<img src="screenshots/detail.png" width="300">
