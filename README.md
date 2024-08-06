@@ -4,7 +4,7 @@ A new Flutter project for managing blogs.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application. The app fetches blog data from a remote API, caches images locally, and displays the blogs in a list. 
+This project is a starting point for a Flutter application. The app fetches blog data from a remote API, caches blogs locally, and displays the blogs in a list. 
 
 ### Features
 
