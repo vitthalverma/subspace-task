@@ -18,7 +18,7 @@ class BlogCard extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: 17.h,
+        height: 29.h,
         width: double.infinity,
         decoration: BoxDecoration(
           color: color,
@@ -26,10 +26,22 @@ class BlogCard extends StatelessWidget {
         ),
         margin: EdgeInsets.all(1.5.h),
         padding: EdgeInsets.all(
-          3.h,
+          1.5.h,
         ),
         child: Column(
           children: [
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(3.w),
+              ),
+              height: 15.h,
+              width: double.infinity,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(3.w),
+                child: Image.network(blog.imageUrl, fit: BoxFit.cover),
+              ),
+            ),
+            SizedBox(height: 2.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
