@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:subspace_task/core/app/app_colors.dart';
@@ -58,8 +59,8 @@ class _BlogDetailScreenState extends State<BlogDetailScreen> {
                   BoxDecoration(borderRadius: BorderRadius.circular(3.w)),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(3.w),
-                child: Image.network(
-                  blog.imageUrl,
+                child: CachedNetworkImage(
+                  imageUrl: blog.imageUrl,
                   fit: BoxFit.cover,
                 ),
               ),

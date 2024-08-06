@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:subspace_task/core/app/app_colors.dart';
@@ -38,7 +39,11 @@ class BlogCard extends StatelessWidget {
               width: double.infinity,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(3.w),
-                child: Image.network(blog.imageUrl, fit: BoxFit.cover),
+                child: CachedNetworkImage(
+                  key: UniqueKey(),
+                  imageUrl: blog.imageUrl,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             SizedBox(height: 2.h),
