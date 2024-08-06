@@ -3,9 +3,14 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:subspace_task/core/app/app_colors.dart';
 import 'package:subspace_task/features/blogs/domain/entities/blog_entity.dart';
 
-class BlogDetailScreen extends StatelessWidget {
+class BlogDetailScreen extends StatefulWidget {
   const BlogDetailScreen({super.key});
 
+  @override
+  State<BlogDetailScreen> createState() => _BlogDetailScreenState();
+}
+
+class _BlogDetailScreenState extends State<BlogDetailScreen> {
   @override
   Widget build(BuildContext context) {
     final blog = ModalRoute.of(context)!.settings.arguments as BlogEntity;
@@ -19,6 +24,19 @@ class BlogDetailScreen extends StatelessWidget {
               Icons.arrow_back_ios_new_rounded,
               color: AppColors.whiteColor,
             )),
+        actions: [
+          IconButton(
+            icon: Icon(
+              blog.isFavorite ? Icons.favorite : Icons.favorite_border,
+              color: blog.isFavorite ? Colors.red : Colors.white,
+            ),
+            onPressed: () {
+              setState(() {
+                blog.isFavorite = !blog.isFavorite;
+              });
+            },
+          ),
+        ],
       ),
       body: Padding(
         padding: EdgeInsets.all(5.w),
